@@ -80,6 +80,8 @@ Each of the above operators accept the following arguments:
   * If set to `True`, passes `--full-refresh`
 * `vars`
   * If set, passed as the `--vars` argument to the `dbt` command. Should be set as a Python dictionary, as will be passed to the `dbt` command as YAML
+* `environ`
+  * If set, values in the passed Python dictionary will be added as supplemental environment variables to the environment that the `dbt` command runs within, enabling secrets to be passed to profiles.yml at runtime.
 * `models`
   * If set, passed as the `--models` argument to the `dbt` command
 * `exclude`
